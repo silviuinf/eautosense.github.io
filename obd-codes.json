@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "engine_light",
+    "name": "Martor Verificare Motor (Check Engine)",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_check_engine.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Poți continua drumul până la cel mai apropiat service, dar evită turațiile mari.",
+      "red_flashing": "OPREȘTE IMEDIAT! Pericol de avariere gravă a motorului sau catalizatorului."
+    },
+    "meaning": "Modulul de comandă (ECU) a detectat o eroare în sistemul de injecție, aprindere sau evacuare.",
+    "common_causes": [
+      "Sondă Lambda defectă",
+      "Bujii sau bobine de aprindere uzate",
+      "Valvă EGR blocată",
+      "Bifurcație / Scurgere de aer pe admisie",
+      "Senzor debitmetru aer (MAF) defect",
+      "Buson rezervor slăbit sau lipsă"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0100",
+        "desc": "Debitmetru aer (MAF) – defecțiune circuit"
+      },
+      {
+        "code": "P0101",
+        "desc": "Debitmetru aer (MAF) – valori în afara intervalului"
+      },
+      {
+        "code": "P0130",
+        "desc": "Sondă lambda (banc 1, senzor 1) – defecțiune circuit"
+      },
+      {
+        "code": "P0171",
+        "desc": "Amestec prea sărac (banc 1)"
+      },
+      {
+        "code": "P0172",
+        "desc": "Amestec prea bogat (banc 1)"
+      },
+      {
+        "code": "P0300",
+        "desc": "Rateuri de aprindere aleatorii / multiple"
+      },
+      {
+        "code": "P0301",
+        "desc": "Rateuri de aprindere – cilindrul 1"
+      },
+      {
+        "code": "P0302",
+        "desc": "Rateuri de aprindere – cilindrul 2"
+      },
+      {
+        "code": "P0303",
+        "desc": "Rateuri de aprindere – cilindrul 3"
+      },
+      {
+        "code": "P0304",
+        "desc": "Rateuri de aprindere – cilindrul 4"
+      },
+      {
+        "code": "P0335",
+        "desc": "Senzor poziție arbore cotit – circuit"
+      },
+      {
+        "code": "P0340",
+        "desc": "Senzor poziție ax cu came – circuit"
+      },
+      {
+        "code": "P0400",
+        "desc": "Recirculare gaze evacuare (EGR) – debit incorect"
+      },
+      {
+        "code": "P0401",
+        "desc": "EGR – debit insuficient"
+      },
+      {
+        "code": "P0420",
+        "desc": "Eficiență catalizator sub prag (banc 1)"
+      },
+      {
+        "code": "P0440",
+        "desc": "Sistem control vapori combustibil (EVAP) – defecțiune"
+      },
+      {
+        "code": "P0455",
+        "desc": "Sistem EVAP – scurgere mare"
+      },
+      {
+        "code": "P0505",
+        "desc": "Sistem control ralanti – defecțiune"
+      }
+    ]
+  },
+  {
+    "id": "oil_pressure",
+    "name": "Presiune Ulei Scăzută",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_oil_pressure.svg",
+    "severity_level": "RED",
+    "gravity": "OPREȘTE IMEDIAT motorul, în siguranță! Continuarea drumului poate distruge motorul în câteva minute.",
+    "meaning": "Presiunea uleiului din motor este prea mică pentru o ungere corectă a pieselor în mișcare.",
+    "common_causes": [
+      "Nivel de ulei foarte scăzut",
+      "Pompă de ulei defectă",
+      "Sorb sau filtru de ulei înfundat",
+      "Senzor (presostat) de presiune defect",
+      "Scurgeri masive de ulei"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0520",
+        "desc": "Senzor / comutator presiune ulei – circuit"
+      },
+      {
+        "code": "P0521",
+        "desc": "Senzor presiune ulei – valori în afara intervalului"
+      },
+      {
+        "code": "P0524",
+        "desc": "Presiune ulei motor prea scăzută"
+      }
+    ]
+  },
+  {
+    "id": "oil_level",
+    "name": "Nivel Ulei Scăzut",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_oil_level.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Completează uleiul cât mai curând și verifică joja înainte de un drum lung.",
+    "meaning": "Senzorul de nivel a detectat că uleiul din baie este sub minimul recomandat, prea ridicat, sau senzorul de nivel este defect.",
+    "common_causes": [
+      "Consum normal de ulei între schimburi",
+      "Scurgeri pe la garnituri sau simeringuri",
+      "Consum excesiv (segmenți sau turbo uzat)",
+      "Senzor de nivel defect",
+      "Nivel de ulei prea ridicat (supraumplere)"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P250F",
+        "desc": "Nivel ulei motor prea scăzut"
+      }
+    ]
+  },
+  {
+    "id": "coolant_temp",
+    "name": "Temperatură Lichid de Răcire",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_coolant_temp.svg",
+    "severity_level": "RED",
+    "gravity": {
+      "blue": "Motorul este încă rece – evită turațiile mari până la încălzire.",
+      "red": "OPREȘTE și lasă motorul să se răcească! NU deschide vasul de expansiune cu motorul fierbinte."
+    },
+    "meaning": "Motorul s-a supraîncălzit sau nivelul lichidului de răcire (antigel) este prea scăzut.",
+    "common_causes": [
+      "Nivel scăzut de antigel / scurgeri",
+      "Termostat blocat",
+      "Pompă de apă defectă",
+      "Ventilator de răcire defect",
+      "Garnitură de chiulasă arsă",
+      "Radiator înfundat sau spart"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0115",
+        "desc": "Senzor temperatură lichid răcire – circuit"
+      },
+      {
+        "code": "P0117",
+        "desc": "Senzor temperatură lichid răcire – semnal scăzut"
+      },
+      {
+        "code": "P0118",
+        "desc": "Senzor temperatură lichid răcire – semnal ridicat"
+      },
+      {
+        "code": "P0128",
+        "desc": "Termostat – temperatura lichidului sub pragul de reglare"
+      },
+      {
+        "code": "P0217",
+        "desc": "Supraîncălzire motor"
+      }
+    ]
+  },
+  {
+    "id": "battery_charge",
+    "name": "Încărcare Baterie / Alternator",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_battery.svg",
+    "severity_level": "RED",
+    "gravity": "Poți conduce doar până se descarcă bateria (de obicei câteva zeci de minute). Oprește consumatorii inutili și mergi direct la service.",
+    "meaning": "Bateria nu mai este încărcată corect de alternator în timpul mersului.",
+    "common_causes": [
+      "Alternator defect (regulator de tensiune, perii)",
+      "Curea de accesorii ruptă sau slăbită",
+      "Borne ale bateriei oxidate sau slăbite",
+      "Baterie uzată",
+      "Cablaj întrerupt"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0562",
+        "desc": "Tensiune sistem scăzută"
+      },
+      {
+        "code": "P0563",
+        "desc": "Tensiune sistem ridicată"
+      },
+      {
+        "code": "P0620",
+        "desc": "Circuit control alternator – defecțiune"
+      }
+    ]
+  },
+  {
+    "id": "immobilizer",
+    "name": "Imobilizator / Cheie Nedetectată",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_immobilizer.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": "Dacă martorul rămâne aprins, motorul poate refuza să pornească. Încearcă cheia de rezervă.",
+    "meaning": "Sistemul antifurt nu recunoaște cheia sau are o defecțiune.",
+    "common_causes": [
+      "Baterie descărcată în cheie",
+      "Cheie neprogramată sau deteriorată",
+      "Antenă a imobilizatorului defectă"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0513",
+        "desc": "Cheie imobilizator invalidă"
+      }
+    ]
+  },
+  {
+    "id": "brake_system",
+    "name": "Sistem de Frânare / Frână de Mână",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_brake.svg",
+    "severity_level": "RED",
+    "gravity": "Dacă frâna de mână este eliberată și martorul rămâne aprins – mai ales împreună cu martorul ABS – NU continua drumul: distanța de frânare poate crește mult.",
+    "meaning": "Frâna de mână este trasă, nivelul lichidului de frână este scăzut sau există o defecțiune în sistemul de frânare.",
+    "common_causes": [
+      "Frâna de mână trasă",
+      "Nivel scăzut de lichid de frână",
+      "Plăcuțe foarte uzate (scade nivelul lichidului)",
+      "Scurgeri în circuitul de frânare"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "brake_pads",
+    "name": "Uzură Plăcuțe de Frână",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_brake_pads.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Poți circula, dar înlocuiește plăcuțele în cel mult câteva sute de kilometri.",
+    "meaning": "Senzorul de uzură a detectat că plăcuțele de frână au ajuns la grosimea minimă.",
+    "common_causes": [
+      "Plăcuțe de frână uzate",
+      "Senzor de uzură deteriorat"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "abs",
+    "name": "Sistem ABS",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_abs.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Frânele normale funcționează, dar roțile se pot bloca la frânări bruște. Condu prudent și mergi la service.",
+    "meaning": "Sistemul antiblocare a roților (ABS) este dezactivat din cauza unei defecțiuni.",
+    "common_causes": [
+      "Senzor de turație a roții defect sau murdar",
+      "Inel (coroană) ABS deteriorat",
+      "Modul / pompă ABS defectă",
+      "Siguranță arsă"
+    ],
+    "filter_group": "frane",
+    "obd_codes": [
+      {
+        "code": "C0035",
+        "desc": "Senzor turație roată față stânga – circuit *"
+      },
+      {
+        "code": "C0040",
+        "desc": "Senzor turație roată față dreapta – circuit *"
+      },
+      {
+        "code": "C0045",
+        "desc": "Senzor turație roată spate stânga – circuit *"
+      },
+      {
+        "code": "C0050",
+        "desc": "Senzor turație roată spate dreapta – circuit *"
+      }
+    ]
+  },
+  {
+    "id": "esp",
+    "name": "Control Stabilitate (ESP / ESC)",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_esp.svg",
+    "severity_level": "YELLOW",
+    "gravity": {
+      "flashing": "Sistemul intervine chiar acum pentru a menține stabilitatea – redu viteza.",
+      "steady": "ESP este dezactivat sau defect – condu prudent, mai ales pe carosabil alunecos."
+    },
+    "meaning": "Sistemul de control al stabilității acționează sau este indisponibil.",
+    "common_causes": [
+      "ESP dezactivat manual din buton",
+      "Senzor de unghi al volanului defect",
+      "Senzor de turație a roții defect",
+      "Defecțiune în sistemul ABS",
+      "Carosabil alunecos – gheață, apă, nisip (când clipește)"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "airbag",
+    "name": "Airbag / SRS",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_airbag.svg",
+    "severity_level": "RED",
+    "gravity": "Mașina poate fi condusă, dar airbagurile și pretensionerele centurilor S-AR PUTEA SĂ NU SE DECLANȘEZE la impact.",
+    "meaning": "Sistemul de siguranță pasivă (airbaguri, pretensionere) are o defecțiune.",
+    "common_causes": [
+      "Mufă desfăcută sub scaun",
+      "Spirală (bandă) airbag din volan defectă",
+      "Senzor de impact defect",
+      "Eroare memorată după un accident",
+      "Centură de siguranță cu pretensionator declanșat"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "seat_belt",
+    "name": "Centură de Siguranță Nepusă",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_seat_belt.svg",
+    "severity_level": "RED",
+    "gravity": "Pune centura înainte de plecare – este obligatorie pentru toți ocupanții.",
+    "meaning": "Centura șoferului sau a unui pasager (inclusiv pe locurile din spate) nu este cuplată. Peste circa 30 km/h martorul clipește și se aude un semnal sonor.",
+    "common_causes": [
+      "Centură necuplată",
+      "Obiect greu pe scaunul pasagerului",
+      "Senzor de cuplare defect"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "door_open",
+    "name": "Ușă / Capotă / Portbagaj Deschis",
+    "category": "Caroserie",
+    "icon_asset": "ic_door_open.svg",
+    "severity_level": "RED",
+    "gravity": "Oprește și închide ușa, capota sau portbagajul înainte de a continua drumul.",
+    "meaning": "Cel puțin o ușă, capota sau portbagajul nu este închis complet.",
+    "common_causes": [
+      "Ușă, capotă sau portbagaj închise incomplet",
+      "Contact (senzor) de ușă defect"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "tpms",
+    "name": "Presiune Anvelope (TPMS)",
+    "category": "Roți & Direcție",
+    "icon_asset": "ic_tpms.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Redu viteza și verifică presiunea la prima ocazie. O anvelopă dezumflată se poate deteriora sau poate afecta janta.",
+    "meaning": "Presiunea dintr-una sau mai multe anvelope este sub valoarea recomandată.",
+    "common_causes": [
+      "Presiune scăzută (variații de temperatură)",
+      "Pană / înțepătură",
+      "Senzor TPMS cu baterie descărcată",
+      "Sistem nereinițializat după umflare"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "power_steering",
+    "name": "Servodirecție (EPS)",
+    "category": "Roți & Direcție",
+    "icon_asset": "ic_power_steering.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Asistarea poate fi redusă – volanul devine mai greu. Condu cu atenție până la service.",
+      "red": "Servodirecția nu mai funcționează – volanul va fi foarte greu. Oprește în siguranță."
+    },
+    "meaning": "Sistemul de asistare a direcției are o defecțiune.",
+    "common_causes": [
+      "Nivel scăzut de lichid (servodirecție hidraulică)",
+      "Motor electric de asistare defect",
+      "Senzor de cuplu defect",
+      "Tensiune scăzută a bateriei"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "transmission",
+    "name": "Defecțiune / Temperatură Cutie de Viteze",
+    "category": "Transmisie",
+    "icon_asset": "ic_transmission.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Cutia poate intra în regim de avarie (o singură treaptă). Mergi cu viteză redusă până la service.",
+      "red": "Cutia de viteze s-a supraîncălzit – oprește și las-o să se răcească."
+    },
+    "meaning": "Calculatorul transmisiei a detectat o defecțiune sau o temperatură prea mare a uleiului din cutie.",
+    "common_causes": [
+      "Ulei de transmisie vechi sau insuficient",
+      "Supraîncălzire (tractare, trafic intens)",
+      "Senzor sau electrovalvă defectă",
+      "Ambreiaj uzat (cutii automate cu dublu ambreiaj)"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0700",
+        "desc": "Sistem control transmisie – defecțiune"
+      },
+      {
+        "code": "P0715",
+        "desc": "Senzor turație intrare / turbină – circuit"
+      },
+      {
+        "code": "P0720",
+        "desc": "Senzor turație ieșire – circuit"
+      },
+      {
+        "code": "P0730",
+        "desc": "Raport de transmisie incorect"
+      },
+      {
+        "code": "P0218",
+        "desc": "Supraîncălzire ulei transmisie"
+      }
+    ]
+  },
+  {
+    "id": "glow_plug",
+    "name": "Bujii Incandescente (Diesel)",
+    "category": "Motor Diesel",
+    "icon_asset": "ic_glow_plug.svg",
+    "severity_level": "YELLOW",
+    "gravity": {
+      "steady": "La pornire: așteaptă să se stingă martorul, apoi pornește motorul.",
+      "flashing": "În timpul mersului: există o defecțiune la motor – mergi la service."
+    },
+    "meaning": "Bujiile incandescente preîncălzesc camerele de ardere; martorul se aprinde normal la pornire, la motoarele diesel.",
+    "common_causes": [
+      "Preîncălzire normală (se stinge după câteva secunde)",
+      "Bujie incandescentă arsă",
+      "Releu de preîncălzire defect",
+      "Eroare de injecție (când clipește)",
+      "Contact pedală de frână defect (la anumite mărci, când clipește)",
+      "Eroare la turbina cu geometrie variabilă (când clipește)"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0380",
+        "desc": "Bujii incandescente – circuit „A”"
+      },
+      {
+        "code": "P0670",
+        "desc": "Modul control bujii incandescente – circuit"
+      },
+      {
+        "code": "P0671",
+        "desc": "Bujie incandescentă cilindrul 1 – circuit"
+      },
+      {
+        "code": "P0672",
+        "desc": "Bujie incandescentă cilindrul 2 – circuit"
+      },
+      {
+        "code": "P0673",
+        "desc": "Bujie incandescentă cilindrul 3 – circuit"
+      },
+      {
+        "code": "P0674",
+        "desc": "Bujie incandescentă cilindrul 4 – circuit"
+      }
+    ]
+  },
+  {
+    "id": "dpf",
+    "name": "Filtru de Particule (DPF / FAP)",
+    "category": "Motor Diesel",
+    "icon_asset": "ic_dpf.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Rulează 15–30 de minute cu 50–120 km/h, în treapta recomandată, pentru a permite curățarea filtrului. Dacă martorul nu se stinge în 30 de minute, mergi la service.",
+    "meaning": "Filtrul de particule s-a încărcat cu funingine și are nevoie de regenerare.",
+    "common_causes": [
+      "Multe drumuri scurte, prin oraș",
+      "Regenerare întreruptă",
+      "Senzor de presiune diferențială defect",
+      "Injectoare sau valvă EGR defecte",
+      "Termostat defect (motorul nu ajunge la temperatura de lucru)"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P2002",
+        "desc": "Eficiență filtru de particule sub prag (banc 1)"
+      },
+      {
+        "code": "P2452",
+        "desc": "Senzor presiune diferențială DPF – circuit"
+      },
+      {
+        "code": "P2463",
+        "desc": "Filtru de particule – acumulare excesivă de funingine"
+      }
+    ]
+  },
+  {
+    "id": "water_in_fuel",
+    "name": "Apă în Motorină",
+    "category": "Motor Diesel",
+    "icon_asset": "ic_water_in_fuel.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Golește cât mai curând separatorul de apă al filtrului de motorină – apa poate deteriora injectoarele.",
+    "meaning": "S-a acumulat apă în separatorul filtrului de motorină.",
+    "common_causes": [
+      "Motorină de calitate slabă",
+      "Condens în rezervor",
+      "Filtru de motorină saturat"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P2269",
+        "desc": "Apă în combustibil detectată"
+      }
+    ]
+  },
+  {
+    "id": "adblue_warning",
+    "name": "Nivel Scăzut AdBlue / Eroare SCR",
+    "category": "Camioane & Diesel Moderne",
+    "icon_asset": "ic_adblue.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Mai poți parcurge numărul de km afișat în bord. Dacă ajunge la 0, motorul NU va mai porni!",
+    "meaning": "Nivelul de lichid AdBlue este scăzut sau există o defecțiune la sistemul de reducere a emisiilor (SCR).",
+    "common_causes": [
+      "Lipsă lichid AdBlue",
+      "Pompă AdBlue defectă sau injector blocat",
+      "Senzor NOx defect"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": [
+      {
+        "code": "P203F",
+        "desc": "Nivel agent reducător (AdBlue) prea scăzut"
+      },
+      {
+        "code": "P207F",
+        "desc": "Calitate agent reducător (AdBlue) necorespunzătoare"
+      },
+      {
+        "code": "P20EE",
+        "desc": "Eficiență catalizator SCR (NOx) sub prag"
+      },
+      {
+        "code": "P2200",
+        "desc": "Senzor NOx – circuit (banc 1)"
+      }
+    ]
+  },
+  {
+    "id": "air_pressure",
+    "name": "Presiune Aer Scăzută (Frâne Pneumatice)",
+    "category": "Camioane & Diesel Moderne",
+    "icon_asset": "ic_air_pressure.svg",
+    "severity_level": "RED",
+    "gravity": "NU pleca până când presiunea nu ajunge la valoarea normală! Sub un anumit prag, frânele cu arc se blochează automat.",
+    "meaning": "Presiunea aerului din circuitele de frânare pneumatică este sub nivelul de siguranță.",
+    "common_causes": [
+      "Compresor de aer defect",
+      "Scurgeri pe conducte sau racorduri",
+      "Uscător de aer înfundat",
+      "Supapă de protecție defectă"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "low_fuel",
+    "name": "Rezervă Combustibil",
+    "category": "Informare",
+    "icon_asset": "ic_low_fuel.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Alimentează cât mai curând; de obicei mai ai aproximativ 50 km autonomie (circa 6 litri în rezervor).",
+    "meaning": "Nivelul de combustibil din rezervor a intrat în rezervă.",
+    "common_causes": [
+      "Nivel scăzut de combustibil",
+      "Sondă (plutitor) de nivel defectă"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": [
+      {
+        "code": "P0460",
+        "desc": "Senzor nivel combustibil – circuit"
+      }
+    ]
+  },
+  {
+    "id": "washer_fluid",
+    "name": "Nivel Lichid Spălare Parbriz",
+    "category": "Informare",
+    "icon_asset": "ic_washer_fluid.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Completează lichidul de parbriz (iarna folosește lichid antiîngheț).",
+    "meaning": "Rezervorul de lichid pentru spălarea parbrizului este aproape gol.",
+    "common_causes": [
+      "Lichid consumat",
+      "Rezervor sau furtun fisurat"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "service",
+    "name": "Revizie / Service",
+    "category": "Informare",
+    "icon_asset": "ic_service.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Programează revizia periodică – nu este o defecțiune.",
+    "meaning": "A expirat intervalul de întreținere (schimb de ulei, filtre).",
+    "common_causes": [
+      "Se apropie sau a trecut termenul reviziei",
+      "Indicatorul nu a fost resetat după revizie"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "frost",
+    "name": "Avertizare Polei",
+    "category": "Informare",
+    "icon_asset": "ic_frost.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Temperatura exterioară a scăzut sub +3…+4 °C (în funcție de mașină) – drumul poate fi alunecos, mai ales pe poduri și în zonele umbrite. Condu prudent.",
+    "meaning": "Avertizare de risc de gheață pe carosabil.",
+    "common_causes": [
+      "Temperatură exterioară scăzută"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "start_stop",
+    "name": "Sistem Start-Stop",
+    "category": "Informare",
+    "icon_asset": "ic_start_stop.svg",
+    "severity_level": "GREEN",
+    "gravity": {
+      "green": "Motorul a fost oprit automat pentru economie de combustibil.",
+      "yellow": "Sistemul start-stop este indisponibil sau defect (de cele mai multe ori din cauza bateriei)."
+    },
+    "meaning": "Starea sistemului care oprește și repornește automat motorul la staționare.",
+    "common_causes": [
+      "Funcționare normală (verde)",
+      "Baterie descărcată sau uzată (galben)",
+      "Temperatură exterioară prea mică sau prea mare"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "bulb_failure",
+    "name": "Bec Ars / Defecțiune Lumini",
+    "category": "Lumini",
+    "icon_asset": "ic_bulb_failure.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Înlocuiește becul cât mai curând – circulația cu lumini defecte se sancționează.",
+    "meaning": "Un bec sau un grup optic exterior nu funcționează.",
+    "common_causes": [
+      "Bec ars",
+      "Mufă oxidată",
+      "Siguranță arsă"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "low_beam",
+    "name": "Faza Scurtă",
+    "category": "Lumini",
+    "icon_asset": "ic_low_beam.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – faza scurtă este aprinsă.",
+    "meaning": "Farurile sunt pornite pe faza scurtă (de întâlnire).",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "high_beam",
+    "name": "Faza Lungă",
+    "category": "Lumini",
+    "icon_asset": "ic_high_beam.svg",
+    "severity_level": "BLUE",
+    "gravity": "Informativ – comută pe faza scurtă la întâlnirea altor vehicule, pentru a nu-i orbi.",
+    "meaning": "Farurile sunt pornite pe faza lungă (de drum).",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "fog_front",
+    "name": "Proiectoare de Ceață Față",
+    "category": "Lumini",
+    "icon_asset": "ic_fog_front.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – folosește-le pe ceață, ploaie torențială sau ninsoare.",
+    "meaning": "Proiectoarele de ceață din față sunt aprinse.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "fog_rear",
+    "name": "Proiector de Ceață Spate",
+    "category": "Lumini",
+    "icon_asset": "ic_fog_rear.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Folosește-l doar când vizibilitatea scade sub 50 m; altfel îi orbești pe cei din spate.",
+    "meaning": "Lampa de ceață din spate este aprinsă.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "turn_signals",
+    "name": "Semnalizare",
+    "category": "Lumini",
+    "icon_asset": "ic_turn_signals.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ. Dacă martorul clipește de două ori mai repede, un bec de semnalizare este ars.",
+    "meaning": "Semnalizarea stânga / dreapta sau avariile sunt pornite.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "cruise_control",
+    "name": "Pilot Automat (Cruise Control)",
+    "category": "Informare",
+    "icon_asset": "ic_cruise_control.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – pilotul automat menține viteza setată.",
+    "meaning": "Sistemul de menținere automată a vitezei este activ.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "engine_brake",
+    "name": "Frână de Motor / Retarder",
+    "category": "Camioane & Diesel Moderne",
+    "icon_asset": "ic_engine_brake.svg",
+    "severity_level": "GREEN",
+    "gravity": {
+      "green": "Frâna de motor / retarderul este activ – reduce uzura frânelor de serviciu la coborâri. Atenție pe carosabil alunecos: retarderul poate bloca roțile motoare.",
+      "yellow": "Sistemul este indisponibil sau defect – folosește treptele inferioare de viteză și frânează preventiv la coborâri."
+    },
+    "meaning": "Starea sistemului de frânare suplimentară (frână de motor sau retarder hidraulic), folosit la camioane și autobuze.",
+    "common_causes": [
+      "Funcționare normală (verde)",
+      "Temperatură prea mare a uleiului din retarder",
+      "Electrovalvă sau senzor defect"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "air_suspension",
+    "name": "Suspensie Pneumatică (Perne de Aer)",
+    "category": "Camioane & Diesel Moderne",
+    "icon_asset": "ic_air_suspension.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Redu viteza și evită denivelările – vehiculul poate fi prea jos sau înclinat. Verifică pernele de aer înainte de a continua.",
+    "meaning": "Sistemul de suspensie pneumatică a detectat o înălțime incorectă sau o pierdere de aer.",
+    "common_causes": [
+      "Pernă de aer fisurată",
+      "Compresor sau electrovalvă defectă",
+      "Senzor de nivel defect",
+      "Scurgeri pe conducte"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "lane_assist",
+    "name": "Asistență Menținere Bandă",
+    "category": "Informare",
+    "icon_asset": "ic_lane_assist.svg",
+    "severity_level": "GREEN",
+    "gravity": {
+      "green": "Sistemul este activ și recunoaște marcajele benzii.",
+      "yellow": "Sistemul este indisponibil (cameră murdară, marcaje șterse) sau defect."
+    },
+    "meaning": "Starea sistemului care ajută la menținerea mașinii în bandă.",
+    "common_causes": [
+      "Funcționare normală (verde)",
+      "Parbriz murdar în dreptul camerei",
+      "Cameră decalibrată (după schimbarea parbrizului)"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "esp_off",
+    "name": "ESP / ASR Dezactivat (ESC OFF)",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_esp_off.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Sistemul de control al stabilității sau al tracțiunii este dezactivat – condu prudent, mai ales pe carosabil ud sau alunecos. Reactivează-l din buton când nu mai ai nevoie (ex. după ce ai ieșit din zăpadă).",
+    "meaning": "Controlul tracțiunii (ASR) sau al stabilității (ESP / ESC / DSC) a fost dezactivat de șofer sau din motive tehnice.",
+    "common_causes": [
+      "Dezactivat manual din buton (ex. la pornirea în zăpadă sau nisip)",
+      "Mod sport activat (ESC Sport / DTC)",
+      "Dezactivare automată din cauza unei defecțiuni"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "epc",
+    "name": "EPC – Control Electronic Motor (benzină)",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_epc.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Motorul poate intra în regim de avarie, cu putere redusă. Poți continua cu prudență, dar mergi imediat la service.",
+    "meaning": "Unitatea de comandă a motorului pe benzină a detectat o defecțiune la componentele electronice (clapeta de accelerație, pedala de accelerație, senzori).",
+    "common_causes": [
+      "Clapetă de accelerație murdară sau defectă",
+      "Senzor de poziție a pedalei de accelerație defect",
+      "Contact de frână (stop) defect",
+      "Eroare de senzor sau de cablaj la motor"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "master_warning",
+    "name": "Martor General de Avertizare (STOP / Check Control)",
+    "category": "Avertizare Generală",
+    "icon_asset": "ic_master_warning.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Citește mesajul de pe afișaj și mergi la service cât mai curând, conducând cu grijă.",
+      "red": "OPREȘTE imediat, în siguranță, și oprește motorul! Nu-l mai porni și cheamă asistența."
+    },
+    "meaning": "Martorul se aprinde împreună cu alți martori sau cu un mesaj pe afișaj, pentru a atrage atenția asupra unei defecțiuni.",
+    "common_causes": [
+      "Apare împreună cu un alt martor – vezi semnificația acestuia",
+      "Mesaj de avertizare pe afișajul de bord",
+      "Defecțiune gravă (când este roșu)"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "passenger_airbag_off",
+    "name": "Airbag Pasager Față Dezactivat",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_passenger_airbag_off.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Normal când pe scaunul din față este montat un scaun de copil cu spatele la sensul de mers. Dacă pe scaun stă un adult, reactivează airbagul!",
+    "meaning": "Airbagul frontal al pasagerului din față este dezactivat (din comutatorul cu cheie sau din meniu).",
+    "common_causes": [
+      "Dezactivat intenționat pentru un scaun de copil",
+      "Comutator lăsat pe poziția OFF",
+      "Airbag dezactivat la service (cu aparatul de diagnoză)"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "steering_lock",
+    "name": "Blocare Coloană de Direcție",
+    "category": "Roți & Direcție",
+    "icon_asset": "ic_steering_lock.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Rotește puțin volanul în ambele sensuri pentru a debloca direcția. Dacă mesajul rămâne, mergi cu grijă la service.",
+      "red": "Blocarea volanului este defectă – OPREȘTE și nu continua drumul. După oprirea motorului, este posibil să nu-l mai poți porni."
+    },
+    "meaning": "Sistemul electronic de blocare a volanului (la mașinile cu pornire fără cheie) este activ sau are o defecțiune.",
+    "common_causes": [
+      "Volanul tensionat la pornire (roțile răsucite)",
+      "Defecțiune la mecanismul electronic de blocare",
+      "Baterie descărcată"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "adaptive_cruise",
+    "name": "Pilot Automat Adaptiv (ACC)",
+    "category": "Sisteme de Asistență",
+    "icon_asset": "ic_adaptive_cruise.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "green": "ACC este activ și păstrează viteza și distanța față de mașina din față.",
+      "red": "Frânarea automată nu este suficientă – APASĂ imediat pedala de frână!",
+      "yellow": "Sistemul este indisponibil (senzor murdar, vreme rea) sau defect."
+    },
+    "meaning": "Starea pilotului automat adaptiv, care menține viteza și distanța față de vehiculul din față.",
+    "common_causes": [
+      "Funcționare normală (verde)",
+      "Mașina din față frânează brusc (roșu)",
+      "Radar murdar, acoperit de zăpadă sau gheață",
+      "Defecțiune a radarului"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "front_assist",
+    "name": "Avertizare Coliziune / Frânare de Urgență (Front Assist)",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_front_assist.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "red": "Pericol de coliziune! Frânează imediat – sistemul poate frâna automat.",
+      "yellow": "Distanța față de mașina din față este prea mică sau sistemul este dezactivat / indisponibil."
+    },
+    "meaning": "Sistemul de avertizare la coliziune a detectat un pericol, distanța de siguranță a fost depășită sau sistemul nu este disponibil.",
+    "common_causes": [
+      "Distanță prea mică față de mașina din față",
+      "Frânare de urgență declanșată automat",
+      "Senzor radar / cameră murdar sau acoperit",
+      "Sistem dezactivat (ex. odată cu ESC Sport)"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "auto_hold",
+    "name": "Auto Hold (Menținere Automată)",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_auto_hold.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – mașina este ținută automat pe loc la oprire (semafor, pantă). Pleacă apăsând ușor pedala de accelerație.",
+    "meaning": "Funcția care menține automat mașina frânată după oprire este activă.",
+    "common_causes": [],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "press_brake",
+    "name": "Apăsați Pedala de Frână",
+    "category": "Transmisie",
+    "icon_asset": "ic_press_brake.svg",
+    "severity_level": "GREEN",
+    "gravity": "Apasă pedala de frână pentru a porni motorul sau pentru a schimba din poziția P (cutie automată).",
+    "meaning": "La mașinile cu cutie automată sau pornire fără cheie, pedala de frână trebuie apăsată înainte de pornire sau de schimbarea treptei.",
+    "common_causes": [
+      "Încercare de pornire fără apăsarea frânei",
+      "Schimbarea din P fără apăsarea frânei"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "speed_limiter",
+    "name": "Limitator de Viteză",
+    "category": "Informare",
+    "icon_asset": "ic_speed_limiter.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – mașina nu va depăși viteza setată. Dacă martorul clipește, viteza setată a fost depășită (de ex. la coborâre).",
+    "meaning": "Limitatorul de viteză este activ.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "eco_mode",
+    "name": "Mod ECO",
+    "category": "Informare",
+    "icon_asset": "ic_eco_mode.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – mașina funcționează în regim economic (răspuns mai lin la accelerație, consum redus).",
+    "meaning": "Modul de conducere economic este activ.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "gear_shift",
+    "name": "Indicator Schimbare Treaptă",
+    "category": "Informare",
+    "icon_asset": "ic_gear_shift.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – săgeata în sus recomandă trecerea într-o treaptă superioară, iar săgeata în jos într-o treaptă inferioară, pentru un consum mai mic.",
+    "meaning": "Sistemul recomandă treapta de viteză cea mai economică pentru situația actuală.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "high_beam_assist",
+    "name": "Asistent Fază Lungă",
+    "category": "Lumini",
+    "icon_asset": "ic_high_beam_assist.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – faza lungă se aprinde și se stinge automat, în funcție de trafic.",
+    "meaning": "Asistentul care comută automat între faza lungă și faza scurtă este activ.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "trailer_signals",
+    "name": "Semnalizare Remorcă",
+    "category": "Lumini",
+    "icon_asset": "ic_trailer_signals.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ. Dacă o remorcă este cuplată și martorul NU clipește odată cu semnalizarea, un bec al remorcii este ars.",
+    "meaning": "Lămpile de semnalizare ale remorcii funcționează.",
+    "common_causes": [
+      "Bec de semnalizare al remorcii ars (martorul nu clipește)",
+      "Fișa remorcii conectată incorect"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "lights_off",
+    "name": "Luminile Sunt Stinse",
+    "category": "Lumini",
+    "icon_asset": "ic_lights_off.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Aprinde luminile de întâlnire – sunt obligatorii noaptea, pe vizibilitate redusă și, în multe țări, și ziua în afara localităților.",
+    "meaning": "Mașina circulă cu farurile stinse.",
+    "common_causes": [
+      "Comutatorul de lumini este pe poziția OFF",
+      "Lumini automate dezactivate"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "ecall",
+    "name": "Apel de Urgență (eCall / SOS) Defect",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_ecall.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Mașina poate fi condusă, dar în caz de accident apelul automat de urgență poate să nu funcționeze. Mergi la service.",
+    "meaning": "Sistemul de apel automat de urgență are o defecțiune.",
+    "common_causes": [
+      "Baterie internă a modulului descărcată",
+      "Antenă sau modul de comunicație defect",
+      "Lipsă semnal sau eroare de software"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "hill_descent",
+    "name": "Asistență la Coborârea Pantelor",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_hill_descent.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – mașina coboară automat cu viteză mică pe pante abrupte. Când martorul este mai intens, sistemul frânează chiar acum.",
+    "meaning": "Sistemul de asistență la coborâre (de obicei în modul Off-road) este activ.",
+    "common_causes": [],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "adaptive_suspension",
+    "name": "Suspensie Adaptivă (DCC) Defectă",
+    "category": "Roți & Direcție",
+    "icon_asset": "ic_adaptive_suspension.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Poți continua cu prudență, dar confortul și stabilitatea pot fi afectate. Mergi la service cât mai curând.",
+    "meaning": "Sistemul de suspensie cu amortizoare reglabile electronic are o defecțiune.",
+    "common_causes": [
+      "Amortizor reglabil defect",
+      "Senzor de nivel sau de accelerație defect",
+      "Eroare de cablaj sau de unitate de comandă"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "overspeed",
+    "name": "Avertizare Depășire Viteză",
+    "category": "Informare",
+    "icon_asset": "ic_overspeed.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Redu viteza – martorul și semnalul sonor rămân active cât timp depășești pragul setat (de ex. 120 km/h).",
+    "meaning": "Viteza mașinii depășește pragul setat (în unele țări, prag fix de 120 km/h).",
+    "common_causes": [
+      "Viteză peste limita setată"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "parking_lights",
+    "name": "Lumini de Poziție",
+    "category": "Lumini",
+    "icon_asset": "ic_parking_lights.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informativ – luminile de poziție sunt aprinse. Pe întuneric aprinde faza scurtă; luminile de poziție singure nu sunt suficiente în mers.",
+    "meaning": "Luminile de poziție (de parcare) sunt aprinse.",
+    "common_causes": [],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "catalytic_converter",
+    "name": "Catalizator Supraîncălzit / Defect",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_catalytic_converter.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Redu turația și mergi la service; consumul și emisiile pot crește.",
+      "red": "Oprește în siguranță: un catalizator supraîncălzit poate aprinde ce se află sub mașină."
+    },
+    "meaning": "Sistemul a detectat că eficiența catalizatorului a scăzut sau că acesta se supraîncălzește.",
+    "common_causes": [
+      "Rateuri de aprindere care trimit combustibil nears în catalizator",
+      "Amestec prea bogat",
+      "Catalizator colmatat sau îmbătrânit",
+      "Sondă lambda defectă"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0420",
+        "desc": "Eficiență catalizator sub prag (banc 1)"
+      },
+      {
+        "code": "P0430",
+        "desc": "Eficiență catalizator sub prag (banc 2)"
+      },
+      {
+        "code": "P0422",
+        "desc": "Eficiență catalizator principal sub prag (banc 1)"
+      }
+    ]
+  },
+  {
+    "id": "cold_engine",
+    "name": "Motor Rece (Temperatură Scăzută)",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_cold_engine.svg",
+    "severity_level": "BLUE",
+    "gravity": "Normal la pornire. Condu liniștit, fără turații mari, până se stinge.",
+    "meaning": "Lichidul de răcire nu a ajuns încă la temperatura de lucru a motorului.",
+    "common_causes": [
+      "Pornire la rece",
+      "Termostat blocat deschis, dacă martorul rămâne aprins mult timp"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0128",
+        "desc": "Temperatură lichid de răcire sub pragul termostatului"
+      }
+    ]
+  },
+  {
+    "id": "reduced_power",
+    "name": "Putere Motor Redusă (Mod de Avarie)",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_reduced_power.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Poți ajunge la service, dar motorul răspunde slab: evită depășirile.",
+    "meaning": "Calculatorul motorului limitează puterea ca să protejeze motorul sau cutia de viteze după o eroare.",
+    "common_causes": [
+      "Presiune turbo prea mare sau prea mică",
+      "Senzor clapetă sau pedală de accelerație defect",
+      "Supraîncălzire",
+      "Filtru de particule colmatat"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0299",
+        "desc": "Turbo – presiune de supraalimentare prea mică"
+      },
+      {
+        "code": "P0234",
+        "desc": "Turbo – presiune de supraalimentare prea mare"
+      },
+      {
+        "code": "P2135",
+        "desc": "Senzori poziție clapetă / pedală – valori nepotrivite"
+      }
+    ]
+  },
+  {
+    "id": "air_filter",
+    "name": "Filtru de Aer Colmatat",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_air_filter.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Înlocuiește filtrul de aer la prima ocazie.",
+    "meaning": "Senzorul indică faptul că filtrul de aer este îmbâcsit și motorul primește prea puțin aer.",
+    "common_causes": [
+      "Filtru neschimbat la timp",
+      "Drumuri cu mult praf"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "fuel_cap",
+    "name": "Bușon Rezervor Deschis / Neetanș",
+    "category": "Motor & Evacuare",
+    "icon_asset": "ic_fuel_cap.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Oprește în siguranță și strânge bușonul până se aude clicul.",
+    "meaning": "Sistemul de recuperare a vaporilor de combustibil (EVAP) a detectat o scurgere, de cele mai multe ori la bușon.",
+    "common_causes": [
+      "Bușon slăbit sau uitat deschis",
+      "Garnitura bușonului uzată",
+      "Fisură pe furtunurile EVAP"
+    ],
+    "filter_group": "motor",
+    "obd_codes": [
+      {
+        "code": "P0455",
+        "desc": "Sistem EVAP – scurgere mare"
+      },
+      {
+        "code": "P0457",
+        "desc": "Sistem EVAP – scurgere (bușon slăbit sau lipsă)"
+      },
+      {
+        "code": "P0442",
+        "desc": "Sistem EVAP – scurgere mică"
+      }
+    ]
+  },
+  {
+    "id": "clutch_press",
+    "name": "Apăsați Pedala de Ambreiaj",
+    "category": "Informare",
+    "icon_asset": "ic_clutch_press.svg",
+    "severity_level": "GREEN",
+    "gravity": "Apasă complet ambreiajul pentru a porni motorul.",
+    "meaning": "La unele mașini cu cutie manuală, motorul pornește doar cu pedala de ambreiaj apăsată.",
+    "common_causes": [
+      "Pornire fără ambreiaj apăsat",
+      "Senzor pedală ambreiaj defect, dacă rămâne aprins"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "brake_light_failure",
+    "name": "Bec Stop Ars",
+    "category": "Lumini",
+    "icon_asset": "ic_brake_light_failure.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Înlocuiește becul cât mai repede: cei din spate nu văd când frânezi.",
+    "meaning": "Unul dintre becurile de frână (stopuri) nu funcționează.",
+    "common_causes": [
+      "Bec ars",
+      "Contact oxidat sau mufă defectă",
+      "Comutator pedală de frână defect"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "headlight_leveling",
+    "name": "Reglaj Faruri Defect",
+    "category": "Lumini",
+    "icon_asset": "ic_headlight_leveling.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Evită condusul noaptea până la reparație: farurile pot orbi.",
+    "meaning": "Sistemul care reglează înălțimea fasciculului farurilor nu mai funcționează corect.",
+    "common_causes": [
+      "Senzor de nivel al suspensiei defect",
+      "Motoraș de reglaj al farului defect",
+      "Far lovit sau desprins"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "adaptive_lights",
+    "name": "Faruri Adaptive (AFS) Defecte",
+    "category": "Lumini",
+    "icon_asset": "ic_adaptive_lights.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Farurile funcționează, dar nu mai urmăresc virajele: mergi la service.",
+    "meaning": "Sistemul care rotește farurile în viraje sau le adaptează la drum a raportat o eroare.",
+    "common_causes": [
+      "Senzor acoperit de murdărie sau zăpadă",
+      "Motor de orientare a farului defect",
+      "Eroare a modulului farurilor după un impact"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "drl",
+    "name": "Lumini de Zi (DRL)",
+    "category": "Lumini",
+    "icon_asset": "ic_drl.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informare: luminile de zi sunt aprinse.",
+    "meaning": "Luminile de zi sunt pornite. Pe întuneric sau pe ceață trebuie aprinsă faza scurtă.",
+    "common_causes": [
+      "Funcționare normală"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "rain_light_sensor",
+    "name": "Senzor Ploaie / Lumină Defect",
+    "category": "Lumini",
+    "icon_asset": "ic_rain_light_sensor.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Aprinde manual farurile și ștergătoarele până la reparație.",
+    "meaning": "Senzorul de pe parbriz care comandă automat farurile și ștergătoarele nu funcționează.",
+    "common_causes": [
+      "Parbriz schimbat fără recalibrarea senzorului",
+      "Senzor murdar sau dezlipit",
+      "Defect electric"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "defrost",
+    "name": "Degivrare Parbriz / Lunetă",
+    "category": "Informare",
+    "icon_asset": "ic_defrost.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informare: încălzirea geamului este pornită.",
+    "meaning": "Rezistența de încălzire a lunetei sau a parbrizului este activă, pentru dezaburire și dezghețare.",
+    "common_causes": [
+      "Pornită din buton",
+      "Se oprește singură după câteva minute"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "winter_mode",
+    "name": "Mod Iarnă / Zăpadă",
+    "category": "Informare",
+    "icon_asset": "ic_winter_mode.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informare: mașina pornește mai lin, pentru aderență pe zăpadă și gheață.",
+    "meaning": "Cutia de viteze sau motorul pornesc din treapta a doua și dozează mai fin puterea.",
+    "common_causes": [
+      "Activat din buton"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "key_battery",
+    "name": "Baterie Cheie Descărcată",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_key_battery.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Înlocuiește bateria telecomenzii cât mai curând.",
+    "meaning": "Bateria din cheie este aproape descărcată: telecomanda și pornirea fără cheie pot înceta să funcționeze. La multe mașini, cheia ținută lângă butonul de pornire permite totuși pornirea.",
+    "common_causes": [
+      "Baterie veche (de obicei CR2032)"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "towbar",
+    "name": "Cârlig de Remorcare / Lumini Remorcă",
+    "category": "Caroserie",
+    "icon_asset": "ic_towbar.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Verifică fixarea cârligului și luminile remorcii înainte de plecare.",
+    "meaning": "Cârligul retractabil nu este blocat corect sau un bec al remorcii nu funcționează.",
+    "common_causes": [
+      "Cârlig neblocat după extindere",
+      "Bec ars la remorcă",
+      "Priză de remorcă oxidată"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "convertible_roof",
+    "name": "Plafon Decapotabil Defect",
+    "category": "Caroserie",
+    "icon_asset": "ic_convertible_roof.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Nu depăși viteza din manual; încearcă închiderea plafonului cu mașina oprită.",
+    "meaning": "Plafonul nu s-a deschis sau nu s-a închis complet, sau sistemul hidraulic a raportat o eroare.",
+    "common_causes": [
+      "Mișcare a plafonului întreruptă",
+      "Senzor de poziție defect",
+      "Nivel scăzut al lichidului hidraulic"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "blind_spot",
+    "name": "Asistență Unghi Mort",
+    "category": "Sisteme de Asistență",
+    "icon_asset": "ic_blind_spot.svg",
+    "severity_level": "YELLOW",
+    "gravity": "În oglindă e doar o avertizare. Dacă rămâne aprins în bord, sistemul nu este disponibil.",
+    "meaning": "Sistemul avertizează când o mașină se află în unghiul mort; martorul din bord indică un defect sau senzori acoperiți.",
+    "common_causes": [
+      "Senzori radar din bara spate murdari sau acoperiți de zăpadă",
+      "Bară spate lovită"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "driver_fatigue",
+    "name": "Pauză Recomandată (Oboseală Șofer)",
+    "category": "Sisteme de Asistență",
+    "icon_asset": "ic_driver_fatigue.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Oprește într-un loc sigur și ia o pauză.",
+    "meaning": "Sistemul a detectat un stil de conducere specific oboselii.",
+    "common_causes": [
+      "Drum lung fără pauză",
+      "Corecții bruște de volan"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "hands_off",
+    "name": "Țineți Mâinile pe Volan",
+    "category": "Sisteme de Asistență",
+    "icon_asset": "ic_hands_off.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Pune mâinile pe volan.",
+      "red": "Preia imediat controlul: asistența se dezactivează sau mașina frânează."
+    },
+    "meaning": "Asistența de menținere a benzii sau pilotul automat adaptiv nu mai detectează mâinile pe volan.",
+    "common_causes": [
+      "Mâinile luate de pe volan",
+      "Volanul ținut prea ușor"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "parking_assist",
+    "name": "Senzori de Parcare / Cameră Defecte",
+    "category": "Sisteme de Asistență",
+    "icon_asset": "ic_parking_assist.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Parchează cu atenție: senzorii sau camera nu sunt disponibile.",
+    "meaning": "Senzorii de parcare sau camera de marșarier au raportat o eroare.",
+    "common_causes": [
+      "Senzori murdari sau înghețați",
+      "Senzor lovit",
+      "Cablu sau cameră defectă"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "epb_fault",
+    "name": "Defecțiune Frână de Parcare Electrică",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_epb_fault.svg",
+    "severity_level": "YELLOW",
+    "gravity": "La parcare asigură mașina (treaptă cuplată sau P, roți spre bordură) și mergi la service.",
+    "meaning": "Frâna de parcare electrică nu se poate strânge sau elibera corect.",
+    "common_causes": [
+      "Motoraș de etrier defect",
+      "Plăcuțe spate schimbate fără procedura de service",
+      "Tensiune scăzută a bateriei"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "brake_booster",
+    "name": "Defecțiune Servofrână / Frânare Electronică",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_brake_booster.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Frânează din timp și mergi direct la service.",
+      "red": "Oprește în siguranță: pedala de frână poate deveni foarte grea."
+    },
+    "meaning": "Asistența la frânare (cu vacuum sau electronică) nu funcționează normal. Frânele merg, dar trebuie apăsate mult mai tare.",
+    "common_causes": [
+      "Pompă de vacuum defectă",
+      "Furtun de vacuum fisurat",
+      "Senzor sau modul de frânare electronică defect"
+    ],
+    "filter_group": "frane",
+    "obd_codes": [
+      {
+        "code": "P0556",
+        "desc": "Senzor servofrână – valori în afara intervalului"
+      },
+      {
+        "code": "P0557",
+        "desc": "Senzor servofrână – semnal scăzut"
+      }
+    ]
+  },
+  {
+    "id": "hill_start",
+    "name": "Asistență Pornire în Rampă Indisponibilă",
+    "category": "Frâne & Siguranță",
+    "icon_asset": "ic_hill_start.svg",
+    "severity_level": "YELLOW",
+    "gravity": "La pornirea în pantă folosește frâna de parcare.",
+    "meaning": "Funcția care ține mașina pe loc câteva secunde la pornirea în rampă nu este disponibilă.",
+    "common_causes": [
+      "Defect al sistemului ESP / ABS",
+      "Senzor de înclinare defect"
+    ],
+    "filter_group": "frane",
+    "obd_codes": []
+  },
+  {
+    "id": "tachograph",
+    "name": "Tahograf Defect",
+    "category": "Camioane & Diesel Moderne",
+    "icon_asset": "ic_tachograph.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Notează manual timpii de condus și mergi la un atelier autorizat RAR pentru tahografe.",
+    "meaning": "Tahograful digital a raportat o eroare de înregistrare.",
+    "common_causes": [
+      "Card de șofer neintrodus sau defect",
+      "Senzor de mișcare (de la cutia de viteze) defect",
+      "Tahograf neverificat la termen"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "ev_system_fault",
+    "name": "Defecțiune Sistem de Propulsie Electrică",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_ev_system_fault.svg",
+    "severity_level": "RED_OR_YELLOW",
+    "gravity": {
+      "yellow": "Mergi cât mai curând la service; puterea poate fi limitată.",
+      "red": "Oprește imediat în siguranță, oprește mașina și ieși din vehicul dacă apare mesajul de evacuare."
+    },
+    "meaning": "Bateria de tracțiune, motorul electric sau electronica de putere au raportat o eroare sau o temperatură prea mare.",
+    "common_causes": [
+      "Supraîncălzirea bateriei sau a motorului electric",
+      "Defect de izolație pe înaltă tensiune",
+      "Eroare a invertorului"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "ev_battery_low",
+    "name": "Baterie de Tracțiune – Rezervă",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_ev_battery_low.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Încarcă mașina cât mai curând: autonomia rămasă este mică.",
+    "meaning": "Nivelul de încărcare al bateriei de tracțiune a ajuns la rezervă.",
+    "common_causes": [
+      "Autonomie consumată"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  },
+  {
+    "id": "ev_power_limited",
+    "name": "Putere Limitată (Vehicul Electric)",
+    "category": "Sistem Electric",
+    "icon_asset": "ic_ev_power_limited.svg",
+    "severity_level": "YELLOW",
+    "gravity": "Condu mai lin până se stinge martorul.",
+    "meaning": "Bateria de tracțiune nu poate livra temporar toată puterea, de obicei din cauza temperaturii sau a încărcării scăzute.",
+    "common_causes": [
+      "Baterie foarte rece sau foarte caldă",
+      "Nivel scăzut de încărcare"
+    ],
+    "filter_group": "motor",
+    "obd_codes": []
+  },
+  {
+    "id": "ev_charging",
+    "name": "Cablu de Încărcare Conectat",
+    "category": "Informare",
+    "icon_asset": "ic_ev_charging.svg",
+    "severity_level": "GREEN",
+    "gravity": "Informare: mașina nu pornește cât timp cablul este conectat.",
+    "meaning": "Cablul de încărcare este introdus în priza vehiculului.",
+    "common_causes": [
+      "Încărcare în curs sau cablu uitat conectat"
+    ],
+    "filter_group": "lampi",
+    "obd_codes": []
+  }
+]
