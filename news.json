@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Verifică presiunea în anvelope",
+        "en": "Check your tyre pressure",
+        "fr": "Vérifiez la pression des pneus",
+        "de": "Reifendruck prüfen",
+        "it": "Controlla la pressione degli pneumatici"
+      },
+      "text": {
+        "ro": "O dată pe lună și înainte de drumuri lungi, cu anvelopele reci. Valorile corecte sunt pe eticheta din rama ușii șoferului sau pe clapeta rezervorului.",
+        "en": "Once a month and before long trips, with the tyres cold. The correct values are on the label in the driver’s door frame or on the fuel flap.",
+        "fr": "Une fois par mois et avant les longs trajets, pneus froids. Les bonnes valeurs figurent sur l’étiquette du montant de la porte conducteur ou sur la trappe à carburant.",
+        "de": "Einmal im Monat und vor langen Fahrten, bei kalten Reifen. Die richtigen Werte stehen auf dem Aufkleber im Rahmen der Fahrertür oder an der Tankklappe.",
+        "it": "Una volta al mese e prima dei viaggi lunghi, a pneumatici freddi. I valori corretti sono sull’etichetta nel montante della portiera del guidatore o sullo sportello del carburante."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Anvelopele de iarnă",
+        "en": "Winter tyres",
+        "fr": "Pneus hiver",
+        "de": "Winterreifen",
+        "it": "Pneumatici invernali"
+      },
+      "text": {
+        "ro": "În România sunt obligatorii când drumul este acoperit cu zăpadă, gheață sau polei. Adâncimea minimă recomandată a profilului este de 4 mm.",
+        "en": "In Romania they are mandatory when the road is covered with snow, ice or black ice. The recommended minimum tread depth is 4 mm.",
+        "fr": "En Roumanie, ils sont obligatoires lorsque la route est couverte de neige, de glace ou de verglas. La profondeur minimale de sculpture conseillée est de 4 mm.",
+        "de": "In Rumänien sind sie Pflicht, wenn die Straße mit Schnee, Eis oder Glatteis bedeckt ist. Die empfohlene Mindestprofiltiefe beträgt 4 mm.",
+        "it": "In Romania sono obbligatori quando la strada è coperta di neve, ghiaccio o gelo. La profondità minima consigliata del battistrada è di 4 mm."
+      }
+    }
+  ]
+}
