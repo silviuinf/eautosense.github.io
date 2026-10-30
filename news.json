@@ -3,35 +3,103 @@
     {
       "date": "2026-10-30",
       "title": {
-        "ro": "Verifică presiunea în anvelope",
-        "en": "Check your tyre pressure",
-        "fr": "Vérifiez la pression des pneus",
-        "de": "Reifendruck prüfen",
-        "it": "Controlla la pressione degli pneumatici"
+        "ro": "Lichidul de parbriz să nu înghețe",
+        "en": "Keep your screenwash from freezing",
+        "fr": "Évitez le gel du lave-glace",
+        "de": "Scheibenwaschwasser vor dem Einfrieren schützen",
+        "it": "Evita che il liquido lavavetri geli"
       },
       "text": {
-        "ro": "O dată pe lună și înainte de drumuri lungi, cu anvelopele reci. Valorile corecte sunt pe eticheta din rama ușii șoferului sau pe clapeta rezervorului.",
-        "en": "Once a month and before long trips, with the tyres cold. The correct values are on the label in the driver’s door frame or on the fuel flap.",
-        "fr": "Une fois par mois et avant les longs trajets, pneus froids. Les bonnes valeurs figurent sur l’étiquette du montant de la porte conducteur ou sur la trappe à carburant.",
-        "de": "Einmal im Monat und vor langen Fahrten, bei kalten Reifen. Die richtigen Werte stehen auf dem Aufkleber im Rahmen der Fahrertür oder an der Tankklappe.",
-        "it": "Una volta al mese e prima dei viaggi lunghi, a pneumatici freddi. I valori corretti sono sull’etichetta nel montante della portiera del guidatore o sullo sportello del carburante."
+        "ro": "Pentru evitarea înghețării soluției de parbriz, recomand să se completeze cu alcool sanitar.",
+        "en": "To stop the screenwash from freezing, top it up with rubbing alcohol.",
+        "fr": "Pour éviter que le liquide lave-glace ne gèle, complétez-le avec de l’alcool ménager.",
+        "de": "Damit das Scheibenwaschwasser nicht einfriert, mit Reinigungsalkohol (Isopropanol oder Spiritus) auffüllen.",
+        "it": "Per evitare che il liquido lavavetri geli, rabboccalo con alcol denaturato."
       }
     },
     {
       "date": "2026-10-30",
       "title": {
-        "ro": "Anvelopele de iarnă",
-        "en": "Winter tyres",
-        "fr": "Pneus hiver",
-        "de": "Winterreifen",
-        "it": "Pneumatici invernali"
+        "ro": "Presiunea în roți",
+        "en": "Tyre pressure",
+        "fr": "Pression des pneus",
+        "de": "Reifendruck",
+        "it": "Pressione delle gomme"
       },
       "text": {
-        "ro": "În România sunt obligatorii când drumul este acoperit cu zăpadă, gheață sau polei. Adâncimea minimă recomandată a profilului este de 4 mm.",
-        "en": "In Romania they are mandatory when the road is covered with snow, ice or black ice. The recommended minimum tread depth is 4 mm.",
-        "fr": "En Roumanie, ils sont obligatoires lorsque la route est couverte de neige, de glace ou de verglas. La profondeur minimale de sculpture conseillée est de 4 mm.",
-        "de": "In Rumänien sind sie Pflicht, wenn die Straße mit Schnee, Eis oder Glatteis bedeckt ist. Die empfohlene Mindestprofiltiefe beträgt 4 mm.",
-        "it": "In Romania sono obbligatori quando la strada è coperta di neve, ghiaccio o gelo. La profondità minima consigliata del battistrada è di 4 mm."
+        "ro": "Verificați vizual presiunea în roți și, dacă sunt dezumflate, completați.",
+        "en": "Check your tyres visually and, if they look underinflated, pump them up.",
+        "fr": "Contrôlez visuellement vos pneus et, s’ils sont dégonflés, regonflez-les.",
+        "de": "Prüfen Sie die Reifen per Sichtkontrolle und füllen Sie Luft nach, wenn sie zu wenig Druck haben.",
+        "it": "Controlla a vista le gomme e, se sono sgonfie, gonfiale."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Mașina nefolosită o perioadă lungă",
+        "en": "A car left unused for a long time",
+        "fr": "Une voiture inutilisée longtemps",
+        "de": "Auto längere Zeit nicht benutzt",
+        "it": "Auto ferma a lungo"
+      },
+      "text": {
+        "ro": "Dacă nu utilizați mașina o perioadă mai îndelungată, recomand pornirea ei periodic, pentru reîncărcarea bateriei, timp de 20–30 de minute (până când acul temperaturii apei iese din zona albastră).",
+        "en": "If you don’t use the car for a long time, start it regularly for 20–30 minutes to recharge the battery (until the coolant temperature needle leaves the blue zone).",
+        "fr": "Si vous n’utilisez pas la voiture pendant longtemps, démarrez-la régulièrement pendant 20 à 30 minutes pour recharger la batterie (jusqu’à ce que l’aiguille de température d’eau sorte de la zone bleue).",
+        "de": "Wenn Sie das Auto längere Zeit nicht nutzen, starten Sie es regelmäßig für 20–30 Minuten, damit die Batterie geladen wird (bis die Kühlmitteltemperaturnadel den blauen Bereich verlässt).",
+        "it": "Se non usi l’auto per un lungo periodo, avviala regolarmente per 20–30 minuti per ricaricare la batteria (finché l’ago della temperatura dell’acqua esce dalla zona blu)."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Pornirea cu cabluri de la altă mașină",
+        "en": "Jump-starting from another car",
+        "fr": "Démarrage avec les câbles d’une autre voiture",
+        "de": "Starthilfe von einem anderen Auto",
+        "it": "Avviamento con i cavi da un’altra auto"
+      },
+      "text": {
+        "ro": "Dacă utilizați o altă mașină pentru pornire, după perioada de conectare a cablurilor și de încărcare, deconectați cablurile și apoi încercați pornirea. Există riscul de ardere a sistemului electronic al mașinii conectate.",
+        "en": "If you use another car to start yours, after the cables have been connected and the battery has charged for a while, disconnect the cables and then try to start. Otherwise the electronics of the connected car can burn out.",
+        "fr": "Si vous utilisez une autre voiture pour démarrer, après avoir branché les câbles et laissé charger un moment, débranchez les câbles puis essayez de démarrer. Sinon, l’électronique de la voiture branchée risque de griller.",
+        "de": "Wenn Sie ein anderes Auto als Starthilfe nutzen: Nach dem Anschließen der Kabel und einer Ladezeit die Kabel abklemmen und erst dann starten. Sonst kann die Elektronik des angeschlossenen Autos durchbrennen.",
+        "it": "Se usi un’altra auto per l’avviamento, dopo aver collegato i cavi e lasciato caricare per un po’, scollega i cavi e poi prova ad avviare. Altrimenti l’elettronica dell’auto collegata rischia di bruciarsi."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Plafonul panoramic",
+        "en": "Panoramic roof",
+        "fr": "Toit panoramique",
+        "de": "Panoramadach",
+        "it": "Tetto panoramico"
+      },
+      "text": {
+        "ro": "Dacă mașina are plafon panoramic, curățați periodic zona de scurgere. Există risc mare de înfundare.",
+        "en": "If your car has a panoramic roof, clean the drain area regularly. The drains clog very easily.",
+        "fr": "Si votre voiture a un toit panoramique, nettoyez régulièrement la zone d’écoulement. Elle se bouche très facilement.",
+        "de": "Wenn Ihr Auto ein Panoramadach hat, reinigen Sie regelmäßig den Ablaufbereich. Die Abläufe verstopfen sehr leicht.",
+        "it": "Se l’auto ha il tetto panoramico, pulisci regolarmente la zona di scarico. Gli scarichi si intasano molto facilmente."
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "title": {
+        "ro": "Nu forțați motorul la turație mică",
+        "en": "Don’t lug the engine",
+        "fr": "Ne faites pas tourner le moteur en sous-régime",
+        "de": "Motor nicht untertourig fahren",
+        "it": "Non far girare il motore troppo basso"
+      },
+      "text": {
+        "ro": "Evitați să utilizați motorul subturat.",
+        "en": "Avoid driving with the engine at too low revs.",
+        "fr": "Évitez de rouler avec le moteur en sous-régime.",
+        "de": "Vermeiden Sie es, untertourig zu fahren.",
+        "it": "Evita di guidare con il motore a regime troppo basso."
       }
     }
   ]
